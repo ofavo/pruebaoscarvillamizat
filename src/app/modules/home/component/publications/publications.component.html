@@ -1,0 +1,10 @@
+
+  	
+<div class="card mx-2 my-2" *ngFor="let dato of data" >
+  <div class="card-body">
+    <p class="card-text">{{dato.description}}</p>
+    <a (click)="borrar(dato.idpost)" class="btn btn-primary">Borrar</a>
+  </div>
+</div>
+  
+

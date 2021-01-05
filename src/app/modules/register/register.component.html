@@ -1,0 +1,66 @@
+<div class="container-fluid color" >
+	
+  <div class="row align-items-center h-100">
+   	<div class="d-none d-md-block col-md-4"></div>
+    <div class="col text-center my-auto">
+      	<form  [formGroup]="profileForm"  class="row g-3 w-75 mx-auto p-3 shadow-lg border rounded">
+      			
+      		<div class="col-12">
+		  <h3><strong> Registro</strong></h3>
+      		</div>
+		<hr />
+      		
+ 		 <div class="col-12">
+		   
+   			 <label for="email" class="form-label">Correo Electronico</label>
+   			 <input type="email" formControlName="email"  class="form-control" id="email">
+			 <div *ngIf="profileForm.controls.email.status != 'VALID' && profileForm.value.email.length > 3" class="alert alert-danger">
+			 	<p ><small>Este campo es requerido y debe tener un formato valido eje: example@example.com</small></p>
+			 </div> 
+		 </div>
+
+		 
+ 		 <div class="col-12">
+		   
+   			 <label for="emails" class="form-label">Nickname</label>
+   			 <input type="text" formControlName="nickname"  class="form-control" id="emails">
+			 <div *ngIf="profileForm.controls.nickname.status != 'VALID' && profileForm.value.nickname.length > 3" class="alert alert-danger">
+			 	<p ><small>Este campo es requerido</small></p>
+			 </div> 
+		 </div>
+		 	
+ 		 <div class="col-12">
+		   
+   			 <label for="emailt" class="form-label">Codigo del aplicante</label>
+   			 <input type="text" formControlName="applicantcode"  class="form-control" id="emailt">
+			 <div *ngIf="profileForm.controls.applicantcode.status != 'VALID' && profileForm.value.applicantcode.length > 3" class="alert alert-danger">
+			 	<p ><small>Este campo es requerido </small></p>
+			 </div> 
+		 </div>
+		 
+ 		 <div class="col-12">
+   			 <label for="inputPassword4" class="form-label">Contraseña</label>
+   			 <input type="password" formControlName="password"  class="form-control" id="inputPassword4">
+
+   			 
+			 <div *ngIf="profileForm.controls.password.status != 'VALID' && profileForm.value.password.length > 1" class="alert alert-danger">
+			 	<p ><small>La Contraseña  debe tener por lo menos catro caracteres</small></p>
+			 </div> 
+ 		 </div>
+		 
+
+ 		 <div class="col-12">
+   			 <button type="button" [disabled]="!profileForm.valid"  (click)="sendData()"  class="btn btn-primary">Registrar</button>
+		  </div>
+
+		  <div class="col-12">
+		    <a class="btn" routerLink="/login"><small><strong> Ya tengo una cuenta</strong></small></a>
+		  </div>
+	</form>
+
+    </div>
+    
+   	<div class="d-none d-md-block col-md-4"></div>
+  </div>
+
+</div>

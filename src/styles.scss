@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+
+body {
+  font-family: Montserrat;
+  letter-spacing: 0px;
+}
+
+.btn {
+  text-align : center;
+}
+
+.botone{
+  text-align: center;
+  border: 1px solid lightgrey;
+  border-radius: 48px 48px 48px 48px;
+  -moz-border-radius: 48px 48px 48px 48px;
+  -webkit-border-radius: 48px 48px 48px 48px;
+  width: 100%;
+
+}
+.container-fluid {
+  width:100%;
+  height:100vh;
+}
+.color {
+	background: rgb(9,9,121);
+        background: linear-gradient(90deg, rgba(9,9,121,1) 5%, rgba(0,212,255,1) 35%, rgba(2,0,36,1) 71%, rgba(7,43,144,1) 90%);
+}
+.alert-danger {
+	position: absolute;
+	z-index:2;
+	width:43vh;
+}
+
+.navbar {
+	background: rgb(9,9,121);
+        background: linear-gradient(90deg, rgba(9,9,121,1) 5%, rgba(0,212,255,1) 35%, rgba(2,0,36,1) 71%, rgba(7,43,144,1) 90%);
+}
